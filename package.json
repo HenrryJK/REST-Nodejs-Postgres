@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node"
   },
   "keywords": [],
   "author": "",
@@ -22,11 +22,12 @@
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "nodemon": "^2.0.7"
   },
   "engines": {
     "node": "14.x",
-    "npm" : "7.x"
+    "npm": "7.x"
   }
 }
