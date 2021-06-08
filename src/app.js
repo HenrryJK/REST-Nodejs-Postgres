@@ -4,6 +4,7 @@ import morgan from 'morgan'
 
 import alumnosRouters from './routes/alumno.routers';
 import usersRouters  from './routes/user.routers';
+import productoRouters from './routes/producto.routers'
 
 const app = express();
 var cors = require('cors');
@@ -23,4 +24,5 @@ app.get('/' , function (req , res , next){
 app.use('/api/auth/alumnos' , alumnosRouters);
 
 app.use('/api/auth/users' , usersRouters);
+app.use('/api/auth/productos' , productoRouters);
 export default app;
