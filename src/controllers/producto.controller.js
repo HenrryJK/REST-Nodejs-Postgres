@@ -44,7 +44,7 @@ export const updateProducto = async(req, res)=>{
     try {
         const id = parseInt(req.params.id);
         const{ nomprod, precio , stock , idusuario} = req.body;
-        await pool.query('update producto set nomprod=$1, precio=$2 , stock=$3 , idusuario=$4 where idproducto=$5', [nomprod, precio , stock , idusuario]);
+        await pool.query('update producto set nomprod=$1, precio=$2 , stock=$3 , idusuario=$4 where idproducto=$5', [nomprod, precio , stock , idusuario, id]);
         return res.status(200).json(
             `El producto  ${ id } ha sido modificado correctamente...!`);
     } catch (e) {
